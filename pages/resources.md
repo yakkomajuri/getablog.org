@@ -61,7 +61,7 @@ RSS readers are a way to follow content from websites around the web (provided t
 * **[iA Writer](https://ia.net/writer)**: Distraction-free Markdown editor with a focus mode that hides everything but the sentence you're on.
 * **[Obsidian](https://obsidian.md)**: Local-first Notion-like note-taking app built around Markdown files.
 * **[Typora](https://typora.io)**: Minimal Markdown editor.
-* **[seams](https://github.com/yakkomajuri/seams)****:&#x20;**&#x4D;ad&#x65;**&#x20;**&#x62;y yours truly. Run `seams .` on any directory and get an Obsidian-like Markdown editor in your browser for files in that directory.
+* **[seams](https://github.com/yakkomajuri/seams)**: By yours truly. Run `seams .` on any directory and get an Obsidian-like Markdown editor in your browser for files in that directory.
 
 ## Privacy-friendly analytics
 
