@@ -31,9 +31,41 @@
     </main>
 
     <footer>
-      built with <a href="https://github.com/yakkomajuri/teeny">teeny</a>,
-      <a href="https://github.com/yakkomajuri/seams">seams</a>, and
-      <a href="https://github.com/yakkomajuri/neusletter">neusletter</a>
+      <div class="footer-inner">
+        <div class="newsletter-block">
+          <p class="footer-label">newsletter</p>
+          <p class="newsletter-copy">
+            A newsletter powered by
+            <a href="https://github.com/yakkomajuri/neusletter">neusletter</a>.
+            If this hub of resources grows we may occasionally send updates
+            about new tools and resources for bloggers.
+          </p>
+          <form class="newsletter-form" data-newsletter-form>
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit">subscribe</button>
+          </form>
+        </div>
+        <p
+          class="newsletter-status"
+          data-newsletter-status
+          aria-live="polite"
+        ></p>
+        <p class="footer-meta">
+          website built with
+          <a href="https://github.com/yakkomajuri/teeny">teeny</a>,
+          <a href="https://github.com/yakkomajuri/seams">seams</a>, and
+          <a href="https://github.com/yakkomajuri/neusletter">neusletter</a>
+        </p>
+      </div>
     </footer>
 
     <script src="main.js"></script>
