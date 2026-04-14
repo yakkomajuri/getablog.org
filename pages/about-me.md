@@ -22,7 +22,7 @@ Part of this process has been building tools to help me as a writer, and this we
 
 1. The website is built using Teeny, my own tiny static site generator
 2. I edit the content on this website using **seams**, a rich Markdown editor that's triggered as a CLI
-3. The newsletter is powered by **neusletter**
+3. The newsletter is powered by **[neusletter](https://github.com/yakkomajuri/neusletter)**
 
 All of these tools are open source, and you're more than welcome to contribute to them if you like. I intend to release more tools as I go along, and I'd be really keen to revisit some of my ideas from [recess](https://github.com/yakkomajuri/recess), so follow along if you're interested.
 

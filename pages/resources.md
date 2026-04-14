@@ -8,8 +8,9 @@ title: Resources
 
 I'm a developer and I build tooling for myself to help with my own blog. If you're also a dev and a writer you may or may not find these useful.
 
-* **seams**: Run `seams .` from any directory and get a rich markdown editor in your browser for files in that di.
-* **Teeny**: A hand-written static site generator with plugins, hot reloading, and a few more things in 400 lines of code. This site is built with it.
+* **[seams](https://github.com/yakkomajuri/seams)**: Run `seams .` from any directory and get a beautiful rich markdown editor in your browser for files in that dir.
+* **[Teeny](https://github.com/yakkomajuri/teeny)**: A hand-written static site generator with plugins, hot reloading, and a few more things in 400 lines of code. This site is built with it.
+* **[neusletter](https://github.com/yakkomajuri/neusletter)**: One command to setup a system to collect emails for a newsletter on static websites using free Cloudflare service offerings.
 
 ## Platforms
 
@@ -32,7 +33,7 @@ If you want to manage the code and deployment yourself.
 * **[Astro](https://astro.build)**: Modern JavaScript framework focused on speed, framework-agnostic.
 * **[Jekyll](https://jekyllrb.com)**: The OG static site generator, minimalistic, written in Ruby. GitHub Pages has native support for deploying Jekyll website from a repo with zero config.
 * **[Eleventy (11ty)](https://www.11ty.dev)**: Focused on simplicity, get started fast.
-* **Teeny**: Built by yours truly. 400 lines of hand-written JavaScript. Opinionated but extensible.
+* **[Teeny](https://github.com/yakkomajuri/teeny)**: Built by yours truly. 350 lines of hand-written JavaScript. Opinionated but extensible.
 
 ## Blog and personal website aggregators
 
@@ -60,7 +61,7 @@ RSS readers are a way to follow content from websites around the web (provided t
 * **[iA Writer](https://ia.net/writer)**: Distraction-free Markdown editor with a focus mode that hides everything but the sentence you're on.
 * **[Obsidian](https://obsidian.md)**: Local-first Notion-like note-taking app built around Markdown files.
 * **[Typora](https://typora.io)**: Minimal Markdown editor.
-* **seams:&#x20;**&#x4D;ad&#x65;**&#x20;**&#x62;y yours truly. Run `seams .` on any directory and get an Obsidian-like Markdown editor in your browser for files in that directory.
+* **[seams](https://github.com/yakkomajuri/seams)****:&#x20;**&#x4D;ad&#x65;**&#x20;**&#x62;y yours truly. Run `seams .` on any directory and get an Obsidian-like Markdown editor in your browser for files in that directory.
 
 ## Privacy-friendly analytics
 
