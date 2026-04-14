@@ -1,70 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>konduktor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <nav>
-    <div class="nav-inner">
-      <a class="nav-logo" href="/"><span class="nav-logo-text">GetABlog.org</span></a>
-      <div class="nav-links">
-        <a href="/resources">resources</a>
-        <a href="/about-me">about me</a>
-        <a href="https://github.com/yakkomajuri/getablog.org">contribute</a>
-
-        <!-- <a href="https://npmjs.com/package/konduktor">ne</a> -->
-        <!-- <a href="/llms.txt">llms.txt</a> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>konduktor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a class="nav-logo" href="/"
+          ><span class="nav-logo-text">GetABlog.org</span></a
+        >
+        <div class="nav-links">
+          <a href="/resources">resources</a>
+          <a href="/about-me">about me</a>
+          <a href="https://github.com/yakkomajuri/getablog.org">contribute</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <main>
-    <div id="page-content"></div>
-  </main>
+    <main>
+      <div id="page-content"></div>
+    </main>
 
-  <footer>
-    <a href="https://github.com/yakkomajuri/konduktor-oss">github</a>
-    &nbsp;·&nbsp;
-    <a href="https://npmjs.com/package/konduktor">npm</a>
-    &nbsp;·&nbsp;
-    <a href="https://discord.gg/placeholder">discord</a>
-  </footer>
+    <footer>
+      built with <a href="https://github.com/yakkomajuri/teeny">teeny</a>,
+      <a href="https://github.com/yakkomajuri/seams">seams</a>, and
+      <a href="https://github.com/yakkomajuri/neusletter">neusletter</a>
+    </footer>
 
-  <script src="main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Click-to-copy install boxes
-      document.querySelectorAll('.install').forEach(function (el) {
-        el.addEventListener('click', function () {
-          var text = el.querySelector('code') ? el.querySelector('code').textContent : '';
-          if (!text) return;
-          navigator.clipboard.writeText(text).catch(function () {});
-          el.classList.add('copied');
-          var existing = el.parentNode.querySelector('.copied-label');
-          if (!existing) {
-            var label = document.createElement('span');
-            label.className = 'copied-label';
-            label.textContent = 'Copied!';
-            el.insertAdjacentElement('afterend', label);
-            existing = label;
-          }
-          existing.classList.add('visible');
-          clearTimeout(el._copyTimer);
-          el._copyTimer = setTimeout(function () {
-            el.classList.remove('copied');
-            existing.classList.remove('visible');
-          }, 1200);
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Click-to-copy install boxes
+        document.querySelectorAll(".install").forEach(function (el) {
+          el.addEventListener("click", function () {
+            var text = el.querySelector("code")
+              ? el.querySelector("code").textContent
+              : "";
+            if (!text) return;
+            navigator.clipboard.writeText(text).catch(function () {});
+            el.classList.add("copied");
+            var existing = el.parentNode.querySelector(".copied-label");
+            if (!existing) {
+              var label = document.createElement("span");
+              label.className = "copied-label";
+              label.textContent = "Copied!";
+              el.insertAdjacentElement("afterend", label);
+              existing = label;
+            }
+            existing.classList.add("visible");
+            clearTimeout(el._copyTimer);
+            el._copyTimer = setTimeout(function () {
+              el.classList.remove("copied");
+              existing.classList.remove("visible");
+            }, 1200);
+          });
         });
       });
-    });
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>
