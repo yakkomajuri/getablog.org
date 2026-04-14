@@ -1,0 +1,394 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #faf7f2;
+  --bg-surface:  #f4efe6;
+  --bg-subtle:   #ede6d9;
+  --fg:          #2b2218;
+  --fg-dim:      #7a6a57;
+  --fg-muted:    #b8aa98;
+  --accent:      #8f4e12;
+  --accent-glow: rgba(143, 78, 18, 0.08);
+  --border:      #d9d0c2;
+  --border-soft: #e6e0d4;
+  --mono: 'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --serif: 'Lora', Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ─────────────────────────────────────────── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250, 247, 242, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-inner {
+  display: flex; align-items: center; gap: 2rem;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0.9rem 2rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+
+.nav-logo:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.nav-logo-img {
+  height: 1.4rem;
+  width: auto;
+  display: block;
+}
+
+.nav-logo-text {
+  position: relative;
+  top: 2px;
+  left: -2px;
+}
+
+.nav-links {
+  display: flex; gap: 1.5rem; margin-left: auto;
+}
+
+.nav-links a {
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: opacity 0.15s;
+}
+.nav-links a:hover { opacity: 0.6; }
+
+/* ── MAIN ────────────────────────────────────────── */
+main {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 2rem 10rem;
+}
+
+/* ── PAGE CONTENT ────────────────────────────────── */
+
+/* Hero h1 — first heading gets large treatment */
+#page-content > h1:first-child {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 7vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  color: var(--fg);
+}
+
+/* Section headings */
+h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-top: 2.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Body copy */
+p {
+  color: var(--fg-dim);
+  margin-bottom: 1.1rem;
+  max-width: 580px;
+}
+
+#page-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.25rem 0;
+  cursor: zoom-in;
+  transition: opacity 0.15s;
+}
+#page-content img:hover { opacity: 0.85; }
+
+/* ── IMAGE MODAL ────────────────────────────────── */
+.img-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  cursor: zoom-out;
+}
+.img-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.img-modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+.img-modal.open img {
+  transform: scale(1);
+}
+
+em { color: inherit; font-style: italic; }
+strong { color: var(--fg); font-weight: 600; }
+
+/* Links */
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--fg); text-decoration: underline; }
+
+/* Lists */
+ul, ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1.1rem;
+  color: var(--fg-dim);
+}
+li { margin-bottom: 0.3rem; }
+li strong { color: var(--fg); }
+
+/* Inline code */
+code {
+  font-family: var(--mono);
+  font-size: 0.82em;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 0.12em 0.42em;
+  border-radius: 3px;
+  color: var(--fg);
+}
+
+/* Code blocks */
+pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  position: relative;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.855rem;
+  line-height: 1.75;
+  color: var(--fg);
+}
+
+/* Blockquote as accent callout */
+blockquote {
+  border-left: 2px solid var(--accent);
+  background: var(--accent-glow);
+  padding: 0.875rem 1.25rem;
+  margin: 1.75rem 0;
+  border-radius: 0 5px 5px 0;
+}
+blockquote p {
+  color: var(--fg);
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 4.5rem 0;
+}
+
+/* ── COMPONENTS (used from markdown HTML) ───────── */
+
+/* Install command box */
+.install {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem 1.25rem;
+  margin: 0.75rem 0 1rem;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.15s;
+  user-select: none;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.install:hover { border-color: var(--fg-dim); }
+.install.copied { border-color: var(--fg); }
+
+.copied-label {
+  display: inline-block;
+  margin-left: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--fg);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s;
+  pointer-events: none;
+}
+.copied-label.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.install .prompt { color: var(--fg-muted); }
+.install code { background: none; border: none; padding: 0; font-size: inherit; }
+.install .sh-cmd { color: var(--fg); }
+.install .sh-flag { color: var(--fg-dim); }
+.install .sh-url { color: var(--accent); }
+.install .sh-op { color: var(--fg-muted); }
+
+/* CTA link row */
+.cta-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 0.5rem;
+}
+.cta-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.83rem;
+  color: var(--fg-dim);
+  text-decoration: none;
+  transition: border-color 0.12s, color 0.12s;
+}
+.cta-links a:hover {
+  border-color: var(--fg-muted);
+  color: var(--fg);
+}
+
+/* Feature grid (optional 2-col) */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+.feature {
+  padding: 1.5rem;
+  background: var(--bg-surface);
+}
+.feature h3 {
+  font-size: 0.85rem;
+  color: var(--fg);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.feature p {
+  font-size: 0.875rem;
+  margin: 0;
+  max-width: none;
+}
+
+/* Tag list */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.tags span {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--fg-dim);
+}
+
+/* ── FOOTER ─────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 2rem;
+  text-align: center;
+  color: var(--fg-muted);
+  font-size: 0.8rem;
+  font-family: var(--mono);
+}
+footer a { color: var(--fg-muted); }
+footer a:hover { color: var(--fg-dim); text-decoration: none; }
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 600px) {
+  .nav-inner { padding: 0.8rem 1rem; gap: 1rem; }
+  .nav-links { gap: 0.9rem; }
+  .nav-links a { font-size: 0.8rem; }
+  main { padding: 0 1rem 7rem; }
+  #page-content > h1:first-child { margin-top: 4rem; font-size: clamp(2rem, 9vw, 2.6rem); }
+  .install { font-size: 0.75rem; padding: 0.7rem 1rem; gap: 0.5rem; }
+  h2 { font-size: 1.15rem; }
+  p, li { font-size: 0.9rem; }
+  pre { padding: 1rem; }
+  pre code { font-size: 0.78rem; }
+}
+
+@media (min-width: 1100px) {
+  body { font-size: 18px; }
+  .nav-inner { max-width: 860px; }
+  main { max-width: 860px; }
+  p { max-width: 660px; }
+}
