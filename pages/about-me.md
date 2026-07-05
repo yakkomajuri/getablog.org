@@ -6,7 +6,7 @@ title: About me
 
 Hey, I'm Yakko and I'm a software developer who has a few blogs and really should consolidate them.
 
-I write technical pieces and content about running a compnay at [blog.yakkomjuri.com](https://blog.yakkomajuri.com) and I have a Substack with more personal reflective pieces called [Memoirs & Rambles](https://memoirsandrambles.substack.com/) (that unfortunately hasn't seen a post in a while).
+I write technical pieces and content about running a company at [yakko.dev](https://yakko.dev) and I have a Substack with more personal reflective pieces called [Memoirs & Rambles](https://memoirsandrambles.substack.com/) (that unfortunately hasn't seen a post in a while).
 
 I also have some writing that only exists on [yakkomajuri.com](https://yakkomajuri.com) and hasn't been ported over anywhere else and have previously written introductory technical content on [Medium](https://yakkomajuri.medium.com/).
 
