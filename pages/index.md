@@ -21,7 +21,7 @@ So this is what this website is about. It's here to encourage you to get a blog.
 
 And if you don't know where to start, this website can also help you.
 
-Head over to [Resources](/pages/resources.md) for a list of useful platforms and tools to help you in your writing journey.
+Head over to [Resources](/resources) for a list of useful platforms and tools to help you in your writing journey.
 
 As part of trying to write more myself, I've also been building tools that help me and open-sourcing them, and this website will become the home for these tools.
 
